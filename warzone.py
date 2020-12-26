@@ -43,10 +43,7 @@ async def save_player_stats(client, player):
 
 async def get_friends(client):
     friends = await client.GetMyFriends()
-    friends_usernames = [
-        # {"username":"BrokyBrawks#21354", "platform":Platform.BattleNet},
-        {"username":"TTw#1365", "platform":Platform.BattleNet}
-    ]
+    friends_usernames = []
     for friend in friends:
         if "#" in friend.username:
             friends_usernames.append({"username":friend.username, "platform":friend.platform})
